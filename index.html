@@ -42,6 +42,10 @@
         button:hover{
             background-color: antiquewhite;
         }
+        .dark-mode{
+            background-color: black;
+            color:white;
+        }
 
     </style>
 </head>
@@ -50,6 +54,8 @@
         <h1>Click Counter</h1>
         <h2 id="counter">0</h2>
         <button id="click-btn">Click Me</button>
+
+        <button id="theme">Dark</button>
     </div>
 
 
@@ -67,6 +73,12 @@
             console.log(count);
         })
 
+
+        const theme = document.getElementById('theme');
+
+        theme.addEventListener('click',() =>{
+            document.body.classList.toggle('dark-mode')
+        })
     </script>
 </body>
 </html>
